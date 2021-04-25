@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="order_time">
+        <item>Life Time</item>
+        <item>Tomorrow</item>
+        <item>Yesterday</item>
+    </string-array>
+
+</resources>

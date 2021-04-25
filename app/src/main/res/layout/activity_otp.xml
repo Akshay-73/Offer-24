@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <variable
+            name="viewHandler"
+            type="com.pstlservices.offers24.utils.handler.ViewItemClickHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ui.otp.OtpActivity">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Widget.Seller.Text.Large.Black"
+            android:gravity="center"
+            android:text="One Time Password" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.Seller.Edit"
+                android:background="@color/white"
+                android:hint="Enter OTP"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_verify"
+            style="@style/Widget.Seller.Button"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="Verify" />
+
+    </LinearLayout>
+</layout>

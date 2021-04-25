@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_order"
+                style="@style/Widget.Seller.Text.Title.White.SemiBold"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Orders" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:src="@drawable/ic_search" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_order_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@id/tv_order"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_order_type_item" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_13sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Black.Bold"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="All Orders" />
+
+            <Spinner
+                style="@style/Widget.Seller.Text.Small"
+                android:layout_gravity="end"
+                android:layout_weight="1.6"
+                android:entries="@array/order_time"
+                android:gravity="end"
+                android:spinnerMode="dropdown"
+                android:textAlignment="viewEnd" />
+
+            <!--            <androidx.appcompat.widget.AppCompatImageView-->
+            <!--                android:layout_width="@dimen/_20sdp"-->
+            <!--                android:layout_height="@dimen/_20sdp"-->
+            <!--                android:src="@drawable/ic_next"/>-->
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/layout_order_item"/>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.pstlservices.offers24.utils.handler.ViewItemClickHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.product.activity.AddProductActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Title.White.SemiBold"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Add Product" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                style="@style/Widget.Seller.Back"
+                android:layout_centerVertical="true"
+                android:onClick="@{viewHandler::onClick}" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/shape_stroke_round_gray">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_camera" />
+
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Widget.Seller.Text"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="Add product images (up to 8)" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/Widget.Seller.Edit"
+                    android:background="@color/white"
+                    android:hint="Product Name*"
+                    android:inputType="textPersonName"
+                    android:text="Test Product" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@android:color/transparent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/Widget.Seller.Edit"
+                    android:background="@color/white"
+                    android:hint="Product Category*"
+                    android:inputType="textPersonName"
+                    android:text="Test Product" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.Seller.Edit"
+                        android:background="@color/white"
+                        android:hint="MRP*"
+                        android:inputType="textPersonName"
+                        android:text="₹65" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.Seller.Edit"
+                        android:background="@color/white"
+                        android:hint="Selling price*"
+                        android:inputType="textPersonName"
+                        android:text="₹60" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.Seller.Edit"
+                        android:background="@color/white"
+                        android:hint="Quantity*"
+                        android:inputType="textPersonName"
+                        android:text="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.Seller.Edit"
+                        android:background="@color/white"
+                        android:hint="Unit"
+                        android:inputType="textPersonName"
+                        android:text="piece" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@android:color/transparent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/Widget.Seller.Edit"
+                    android:background="@color/white"
+                    android:hint="Product Details"
+                    android:inputType="textPersonName"
+                    android:text="Test Product" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/ic_add"
+                    android:tint="@color/blue" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Blue"
+                    android:layout_gravity="center"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:text="ADD VARIANTS" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/colorView" />
+        
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Widget.Seller.Text.White.SemiBold"
+            android:padding="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/shape_round_blue"
+            android:text="Add Product"/>
+
+    </LinearLayout>
+</layout>

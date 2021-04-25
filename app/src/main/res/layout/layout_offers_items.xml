@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/shape_round_teal_stroke"
+        android:orientation="vertical"
+        android:padding="@dimen/_1sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/shape_top_round">
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_store"
+                style="@style/Widget.Seller.Text.Black"
+                android:text="Store:- n/a" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_category"
+                style="@style/Widget.Seller.Text"
+                android:layout_below="@id/tv_store"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="Category:- Puma Cap" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_offer"
+                style="@style/Widget.Seller.Text"
+                android:layout_below="@id/tv_category"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="Offer:- abc" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_description"
+                style="@style/Widget.Seller.Text"
+                android:layout_below="@id/tv_offer"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="Description:- abc" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Black"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Expire:- 2021-03-31" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

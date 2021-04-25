@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <variable
+            name="viewHandler"
+            type="com.pstlservices.offers24.utils.handler.ViewItemClickHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ui.SignupActivity">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Widget.Seller.Text.Title.Black.Bold"
+            android:text="Create an account" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.Seller.Edit"
+                android:background="@color/white"
+                android:hint="Full Name"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.Seller.Edit"
+                android:background="@color/white"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.Seller.Edit"
+                android:background="@color/white"
+                android:hint="Phone Number"
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.Seller.Edit"
+                android:background="@color/white"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.Seller.Edit"
+                android:background="@color/white"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/cb_terms_conditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:buttonTint="@color/black"
+            android:text="I agree to the privacy policy and Terms &amp; Consitions" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_signup"
+            style="@style/Widget.Seller.Button"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="Sign up" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Black.Bold"
+                android:layout_width="wrap_content"
+                android:text="Already have an account? " />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_sign_in"
+                android:onClick="@{viewHandler::onClick}"
+                style="@style/Widget.Seller.Text"
+                android:layout_width="wrap_content"
+                android:text="Sign in" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

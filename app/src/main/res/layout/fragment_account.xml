@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewHandler"
+            type="com.pstlservices.offers24.utils.handler.ViewItemClickHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Title.White.SemiBold"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:text="Account" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Blue"
+                android:background="@drawable/shape_white_rect_with_small_round"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:paddingBottom="4dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="Support"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+           <androidx.appcompat.widget.AppCompatImageView
+               android:layout_width="@dimen/_80sdp"
+               android:src="@color/blue"
+               android:layout_margin="@dimen/_10sdp"
+               android:layout_height="@dimen/_80sdp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Black.SemiBold"
+                    android:text="PSTL Service"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_edit_business_details"
+                    android:onClick="@{viewHandler::onClick}"
+                    style="@style/Widget.Seller.Text.Blue"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="Edit business details"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorView"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_edit_business"
+            android:onClick="@{viewHandler::onClick}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@color/colorView"/>
+            
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Black"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:text="Edit business"
+                android:layout_width="0dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_next"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@color/colorView"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Black"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:text="Edit contect"
+                android:layout_width="0dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_next"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@color/colorView"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Black"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:text="Edit owner"
+                android:layout_width="0dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_next"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@color/colorView"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Black"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:text="Delivery charges"
+                android:layout_width="0dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_next"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@color/colorView"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Black"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:text="Additional features"
+                android:layout_width="0dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_next"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

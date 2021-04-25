@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.pstlservices.offers24.utils.handler.ViewItemClickHandler" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Title.White.SemiBold"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Products" />
+
+            <!--            <SearchView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentEnd="true"-->
+            <!--                android:layout_centerVertical="true"-->
+            <!--                android:layout_margin="@dimen/_7sdp"-->
+            <!--                android:queryHint="Search Product"-->
+            <!--                android:searchIcon="@drawable/ic_search" />-->
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:src="@drawable/ic_search" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rl_toolbar"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            tools:listitem="@layout/layout_product_item" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/orange"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardElevation="@dimen/_4sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_add_product"
+                style="@style/Widget.Seller.Text.White"
+                android:onClick="@{viewHandler::onClick}"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_12sdp"
+                android:text="Add new product" />
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+
+</layout>

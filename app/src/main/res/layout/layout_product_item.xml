@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="isOptionVisible"
+            type="Boolean" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:cardElevation="@dimen/_6sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <LinearLayout
+                android:id="@+id/ll_product_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    app:cardCornerRadius="@dimen/_8sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:src="@color/blue" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.Seller.Text.Title.Black"
+                        android:text="Anjir/Fig" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.Seller.Text.Black"
+                        android:text="500 gm" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.Seller.Text.Black"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:text="₹65" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_original_price"
+                            style="@style/Widget.Seller.Text.Gray"
+                            android:text="₹70" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.Seller.Text.Small.Green"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:text="In stock" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_more" />
+
+            <include
+                android:id="@+id/include_product_option"
+                layout="@layout/layout_product_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_more"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:visibility="@{isOptionVisible? View.VISIBLE : View.GONE}" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_more"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:checked="true"
+                app:thumbTint="@color/switch_thumb_color"
+                app:trackTint="@color/switch_track_color" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ll_product_details"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:background="@color/colorView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/ic_share" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Black"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:text="Share Product" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

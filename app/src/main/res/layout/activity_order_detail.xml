@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.pstlservices.offers24.utils.handler.ViewItemClickHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.orders.activity.OrderDetailActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Title.White.SemiBold"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Order #8345" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                style="@style/Widget.Seller.Back"
+                android:layout_centerVertical="true"
+                android:onClick="@{viewHandler::onClick}" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Blue"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:background="@drawable/shape_white_rect_with_small_round"
+                android:paddingStart="@dimen/_7sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_7sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:text="Edit order" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Apr 24, 07:38 PM" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/shape_dot_orange" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="Pending" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@color/colorView" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Title"
+                android:text="1 ITEM" />
+
+            <LinearLayout
+                android:id="@+id/ll_product_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="@dimen/_4sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:src="@color/blue" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.Seller.Text.Title.Black"
+                        android:text="Anjir/Fig" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.Seller.Text.Black"
+                        android:text="500 gm" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.Seller.Text.Blue"
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/shape_blue_with_blue_stroke"
+                            android:paddingStart="@dimen/_8sdp"
+                            android:paddingEnd="@dimen/_8sdp"
+                            android:paddingBottom="@dimen/_3sdp"
+                            android:text="1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.Seller.Text.Black"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:text=" x ₹65" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.Seller.Text.Black"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="₹65" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@color/colorView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Black"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Item Total" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Black"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="₹65" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Black"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Delivery Fee" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Black"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="₹0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Black.SemiBold"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Grand Total" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Black.SemiBold"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="₹65" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@color/colorView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Small.Black"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="CUSTOMER DETAILS" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/ic_share"
+                    android:tint="@color/blue" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Blue.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:text="Share" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Black.SemiBold"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:text="Name:" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="Testing Person" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Black.SemiBold"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.44"
+                    android:text="Mobile:" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:layout_gravity="center"
+                    android:text="Testing Person" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:src="@color/blue" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:src="@color/blue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Black.SemiBold"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:text="Address:" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="Testing Person" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Black.SemiBold"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:text="City:" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="Testing Person" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Black.SemiBold"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:text="Pincode:" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="Testing Person" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text.Black.SemiBold"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:text="Payment:" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Seller.Text"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="Testing Person" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/colorView" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.Red"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="Reject order"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Seller.Text.White.SemiBold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="@dimen/_8sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/shape_round_green"
+                android:layout_weight="1"
+                android:text="Accept order"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</layout>

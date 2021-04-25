@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.pstlservices.offers24.ui.dashboard.HomeFragment"
+        android:label="DASHBOARD"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_products"
+        android:name="com.pstlservices.offers24.ui.product.ProductsFragment"
+        android:label="PRODUCT"
+        tools:layout="@layout/fragment_products" />
+
+    <fragment
+        android:id="@+id/navigation_orders"
+        android:name="com.pstlservices.offers24.ui.orders.OrdersFragment"
+        android:label="ORDERS"
+        tools:layout="@layout/fragment_orders" />
+
+    <fragment
+        android:id="@+id/navigation_offer"
+        android:name="com.pstlservices.offers24.ui.offer.OfferFragment"
+        android:label="OFFERS"
+        tools:layout="@layout/fragment_offer" />
+
+    <fragment
+        android:id="@+id/navigation_manage"
+        android:name="com.pstlservices.offers24.ui.manage.ManageFragment"
+        android:label="MANAGE"
+        tools:layout="@layout/fragment_manage">
+        <action
+            android:id="@+id/action_to_offer"
+            app:destination="@id/navigation_offer" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.pstlservices.offers24.ui.account.AccountFragment"
+        android:label="ACCOUNT"
+        tools:layout="@layout/fragment_account" />
+
+</navigation>
